@@ -1,95 +1,68 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import Head from "next/head";
+import Navigation from "./component/header";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
+    <div className="">
+      <Head>
+        <title>Home</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <Navigation />
+      <div className="">
+        <h1 className="text-2xl font-bold mb-4 mt-4 p-4 text-center">
+          The Mechanical Properties of Concrete with Partial Replacement of
+          Coarse Aggregate with Glass and the Influence of Polystyrene Addition
+        </h1>
+        <p className="p-4 text-center">
+          The following web tools were created during the course of the project
+          to help other student that will decide to work on the same or similar
+          topic in the future.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <div className="p-5 flex justify-center card text-center">
+          <Link href="./psd-curve">
+            <div className="m-2 bg-yellow-600 p-5 rounded text-white hover:bg-yellow-700">
+              <h2 className="font-bold mb-2 underline">
+                Sieve Analysis and PSD Curve
+              </h2>
+              <p>
+                The tool simplifies the computation of sieve analysis data and
+                the fineness modulus also it generates the particle size
+                distribution curve which can be downloaded and used for further
+                analysis.
+              </p>
+            </div>
+          </Link>
+          <Link href="./mix-proportion">
+            <div className="m-2 bg-yellow-600 p-5 rounded text-white hover:bg-yellow-700">
+              <h2 className="font-bold mb-2 underline">
+                Mix Proportion and Cost Estimate
+              </h2>
+              <p>
+                Enables faster calculations for the mix proportion of concrete
+                whose coarse aggregate is partially replaced by other materials
+                like crushed glass, expanded polystyrene, plastics, PKS, fibre
+                glass etc
+              </p>
+            </div>
+          </Link>
+          <Link href="./converter">
+            <div className="m-2 bg-yellow-600 p-5 rounded text-white hover:bg-yellow-700">
+              <h2 className="font-bold mb-2 underline">
+                Calculators and Charts
+              </h2>
+              <p>
+                This helps to convert data gotten from the lab test to usable
+                data for further analysis. It can also generate charts for the
+                compressive and flexural strength of concrete.
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }

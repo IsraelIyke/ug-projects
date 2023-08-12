@@ -1,0 +1,40 @@
+.mix-container input {
+  background-color: hsl(43, 74%, 69%);
+  width: 2.5rem;
+  text-align: center;
+}
+
+.mix {
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+  justify-content: center;
+}
+.mix-table {
+  /* width: 16rem; */
+  height: auto;
+  /* background-color: red; */
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.mix-field div {
+  height: 3.2rem;
+  width: 7rem;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  padding: 0.5rem;
+}
+.mix-title div {
+  height: 3.2rem;
+  width: 10.6rem;
+  padding: 0.5rem;
+  background-color: hsl(43, 74%, 49%);
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+@media screen and (width < 768px) {
+  .mix {
+    justify-content: left;
+  }
+}
